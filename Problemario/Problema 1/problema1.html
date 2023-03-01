@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" 
+        content="IE=edge">
+    <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+        <link href="problema1.css">
+        <script src="problema1.js"></script>
+    <title>Ejercicio1</title>
+</head>
+<body>
+    <div class="problematica">
+        <h4>
+        Suponga que un individuo desea invertir un
+        capital en un banco y desea saber cuanto ganara
+        despues de un mes si el banco paga a razon de
+        8.2% mensual cubriendo hasta un maximo de 36 meses
+        </h4>
+    </div>
+    <br>
+    <div class="proceso">
+        <form method="get" name="formulario" action="">
+            <label><h3>Ingresa la cantidad a invertir</h3></label>
+            <input type="number" name="money" id="money" onkeypress="return validarn(event)">
+            <br>
+            <input type="button" name="comenzar" onclick="return inte()" value="Calcular Interes">
+            <br>
+            <br>
+            <label>Su sueldo total con el interes del 8.2% mensual es de:</label>
+            
+            <input type="text" nombre="suelinte" id="cantinte" readonly="readonly" class="input_text">
+            <br>
+            <br>
+            <label>A un maximo de 36 meses el dinero es de: </label>
+            <input type="text" nombre="mesesm" id="maximom" readonly="readonly" class="input_text">
+            <br>
+            <br>
+            <br>
+            <input type="button" nombre="borrar" value="Borrar Datos" onclick="return borrard()"></td>
+            
+
+        </form>
+    </div>
+    
+    
+</body>
+</html>
