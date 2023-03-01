@@ -1,0 +1,78 @@
+/* Estilos generales */
+*{
+    background-image:https://mx.images.search.yahoo.com/images/view;_ylt=AwrFEZzMj_5jDugHF5LF8Qt.;_ylu=c2VjA3NyBHNsawNpbWcEb2lkAzY1YTY0ODA1ZWQ2NzRlZGE0MTU3ZjQ0MTQxYTUzZDgyBGdwb3MDMgRpdANiaW5n?back=https%3A%2F%2Fmx.images.search.yahoo.com%2Fsearch%2Fimages%3Fp%3Dfondo%2Bcon%2Bcara%2Buwu%26type%3DE211MX885G0%26fr%3Dmcafee%26fr2%3Dpiv-web%26tab%3Dorganic%26ri%3D2&w=800&h=800&imgurl=www.dictionary.com%2Fe%2Fwp-content%2Fuploads%2F2020%2F02%2Fuwu_800x800.jpg&rurl=https%3A%2F%2Fwww.dictionary.com%2Fe%2Fslang%2Fuwu%2F&size=16.6KB&p=fondo+con+cara+uwu&oid=65a64805ed674eda4157f44141a53d82&fr2=piv-web&fr=mcafee&tt=uwu+Meaning+%26+Origin+%7C+Slang+by+Dictionary.com&b=0&ni=21&no=2&ts=&tab=organic&sigr=CxV0JYD16lZE&sigb=30i5nzLxwdBX&sigi=WMqOFQiL_psP&sigt=0kRvuPwkBxDK&.crumb=Idm4/Xuk9N.&fr=mcafee&fr2=piv-web&type=E211MX885G0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  /* Estilos para la sección "form1" */
+  .form1 {
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
+  
+  .form1 h1 {
+    margin-top: 20px;
+  }
+  
+  /* Estilos para el formulario */
+  .form {
+    background-color: #fff;
+    padding: 50px 20px;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .content-formulario {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="email"],
+  input[type="color"],
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  input[type="submit"],
+  input[type="reset"] {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  input[type="submit"]:hover,
+  input[type="reset"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Estilos para la validación */
+  .error {
+    color: red;
+    font-weight: bold;
+  }
