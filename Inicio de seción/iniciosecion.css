@@ -1,0 +1,63 @@
+.formulario {
+    width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+
+  .formulario h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para los campos de texto */
+  .username {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+  .username input {
+    width: 100%;
+    height: 40px;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .username label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    font-size: 16px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  
+  
+  .recordar {
+    font-size: 14px;
+    text-align: right;
+    margin-bottom: 10px;
+  }
+  
+  .recordar a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  .registrarse {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .registrarse a {
+    color: #0077cc;
+    text-decoration: none;
+  }
