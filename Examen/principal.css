@@ -55,3 +55,16 @@ body {
     outline: none;
     border-color: #ff6600;
     }
+    input[type="submit"] {
+        background-color: #4CAF50; /* color de fondo */
+        color: white; /* color del texto */
+        padding: 12px 24px; /* padding alrededor del texto */
+        font-size: 18px; /* tamaño de fuente */
+        border: none; /* quitar borde */
+        border-radius: 4px; /* bordes redondeados */
+        cursor: pointer; /* cursor en forma de mano */
+      }
+      
+      input[type="submit"]:hover {
+        background-color: #3e8e41; /* color de fondo al pasar el mouse por encima */
+      }

@@ -6,21 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Examen</title>
     <link rel="stylesheet" href="./principal.css">
+    <script src="./principal.js"></script>
 </head>
 <body>
-    <div class="Encabezado">
-        <h1>Banco </h1>
-        <h2>Donde tus inversiones crecen </h2>
-    </div>    
-    <form>
-        <div class="Entrada">
-            <label><h3>Ingresa la cantidad a invertir</h3></label>
-            <input type="number" name="money" id="money" onkeypress="return validarn(event)">
+    <form  name="formulario" method="get" onsubmit="return validar(formulario)">
+        <section>
+            <div></div>
+            <div class="Encabezado">
+                <h1>Banco</h1>
+                <h2>Donde tus inversiones crecen</h2>
+            </div> 
+            <div class="Entrada">
+                <label><h3>Ingresa la cantidad a invertir</h3></label>
+                <input type="number" name="money" id="money" min="1000" max="99999999" onkeypress="return validarn(event)">
+            </div>
+            <div class="Entrada">
+                <label><h3>Ingresa la cantidad de tiempo en años</h3></label>
+                <input type="number" name="tiempo" id="tiempo" min="1" max="20" onkeypress="return validarn(event)">
+            </div>
+        </section>
+        <div class="buttons">
+            <input type="submit" name="enviar" value="Enviar Los Datos al registro">
         </div>
-
-        <div class="Entrada">
-            <label><h3>Ingresa la cantidad de tiempo en años</h3></label>
-            <input type="number" name="tiempo" id="tiempo" onkeypress="return validarn(event)">
-    </div>
-</form>
+    </form>
 </body>
+</html>
