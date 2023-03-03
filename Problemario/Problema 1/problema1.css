@@ -45,10 +45,10 @@ body {
   
   input[type="button"]:hover,
   input[type="number"]:hover {
-    background-color: #3e8e41; /*Cambia el color de fondo del botón y el input de número cuando se pasa el cursor sobre él*/
+    background-color: #3e8e41; 
   }
   
   input[type="button"]:active,
   input[type="number"]:active {
-    background-color: #246023; /*Cambia el color de fondo del botón y el input de número cuando se hace clic en él*/
+    background-color: #246023; 
   }
