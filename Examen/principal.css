@@ -5,7 +5,10 @@ body {
     margin: 0;
     padding: 0;
     }
-    
+    .regreso{
+      font-style: italic;
+      color: black;
+      }
     /* Estilos del encabezado */
     .Encabezado {
     background-color: #0077b6;

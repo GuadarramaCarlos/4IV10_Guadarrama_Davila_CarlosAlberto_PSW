@@ -30,7 +30,10 @@ body {
     padding: 5px; /*Agrega un relleno interno de 5px*/
     width: 200px; /*Define un ancho de 200px para el input*/
   }
-  
+  .regreso{
+    font-style: italic;
+    color: black;
+    }
   input[type="button"],
   input[type="number"] {
     background-color: #4CAF50; /*Color de fondo para el botón y el input de número*/
