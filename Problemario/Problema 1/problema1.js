@@ -15,7 +15,6 @@ function inte(){
     var valor = document.getElementById("money").value;
 
     var resul = parseInt(valor);
-
     var inte = resul * 0.082;
 
     var total = resul + inte;

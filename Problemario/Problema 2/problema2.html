@@ -5,10 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
 <link rel="stylesheet" href="./problema2.css">
+<script src="problema2.js"></script>
 </head>
 <body>
     <a href="../problemasmenu.html" class="regreso">Regresar al index</a> 
+    <div>
+        <h4>
+        Un vendedor recibe un sueldo base mas un 35%
+        de comisiones el vendedor desea saber cuanto
+        dinero obtendra por concepto de comisiones a
+        partir de sus ventas las cuales son 5 que
+        realiza durante un mes asi mismo se le hace un
+        descuento de 12% de concepto de impuesto para
+        lo cual desea saber el total que recibira como
+        cobro
+        </h4>
+    </div>
+    <div>
+        <form method="get" name="formulario" action="">
+            <label><h3>Venta numero 1 </h3></label>
+            <input name="V1" type="number" id="V1" min="0">
+            <br>
+            <label><h3>Venta numero 2 </h3></label>
+            <input name="V2" type="number" id="V2" min="0">
+            <br>
+            <label><h3>Venta numero 3 </h3></label>
+            <input name="V3" type="number" id="V3" min="0"> 
+            <br>
+            <label><h3>Venta numero 4 </h3></label>
+            <input name="V4" type="number" id="V4" min="0">
+            <br>
+            <label><h3>Venta numero 5 </h3></label>
+            <input name="V5"type="number" id="V5" min="0">
+            <br>
+            <br>
+            <br>
+            <input type="button" name="send"  onclick="return cantifinal()" value="Calcular">
+            <input type="button" name="borrar" value="Borrar Datos" onclick="return borrado()">
+            <br>
+            <br>
+            <br>
+            <label><h2>Total: </h2></label>
+            <input type="number" name="total" id="totalc" readonly="readonly" 
+                        class="input_text">  
+        </form>
+    </div>
 </body>
 </html>

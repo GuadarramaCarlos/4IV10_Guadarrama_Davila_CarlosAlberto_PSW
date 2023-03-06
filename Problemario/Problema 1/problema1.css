@@ -6,10 +6,10 @@ body {
   
   .problematica {
     background-color: #fff; /*Color de fondo para la sección problemática*/
-    border: 1px solid #ccc; /*Agrega un borde de 1px con color gris claro*/
-    margin: 20px auto; /*Centra el contenedor y le da un margen superior e inferior de 20px y margen izquierdo y derecho automáticos*/
-    padding: 20px; /*Agrega un relleno interno de 20px*/
-    text-align: center; /*Centra el texto en el contenedor*/
+    border: 1px solid #ccc; 
+    margin: 20px auto; 
+    padding: 20px; 
+    text-align: center; 
   }
   
   .proceso {
