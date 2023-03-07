@@ -1,73 +1,118 @@
-/* Estilos del cuerpo */
+css
+Copy code
+/* Estilos para el body */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-    }
-    .regreso{
-font-style: italic;
-color: black;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
 }
-    /* Estilos del encabezado */
-    .Encabezado {
-    background-color: #0077b6;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    }
-    
-    .Encabezado h1 {
-    margin: 0;
-    font-size: 48px;
-    font-weight: bold;
-    text-transform: uppercase;
-    }
-    
-    .Encabezado h2 {
-    margin: 0;
-    font-size: 28px;
-    font-weight: normal;
-    text-transform: uppercase;
-    }
-    
-    /* Estilos de la entrada de dinero */
-    .Entrada {
-    margin: 20px auto;
-    max-width: 400px;
-    text-align: center;
-    }
-    
-    .Entrada label {
-    display: block;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    }
-    
-    .Entrada input[type="number"] {
-    border: 2px solid #0077b6;
-    border-radius: 5px;
-    font-size: 20px;
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    }
-    
-    .Entrada input[type="number"]:focus {
-    outline: none;
-    border-color: #ff6600;
-    }
-    input[type="submit"] {
-        background-color: #4CAF50; /* color de fondo */
-        color: white; /* color del texto */
-        padding: 12px 24px; /* padding alrededor del texto */
-        font-size: 18px; /* tamaño de fuente */
-        border: none; /* quitar borde */
-        border-radius: 4px; /* bordes redondeados */
-        cursor: pointer; /* cursor en forma de mano */
-      }
-      
-      input[type="submit"]:hover {
-        background-color: #3e8e41; /* color de fondo al pasar el mouse por encima */
-      }
+
+/* Estilos para el contenedor principal */
+.main-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 5px #ccc;
+}
+
+/* Estilos para el encabezado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* Estilos para el título del banco */
+.tituloxd {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #008000;
+}
+
+/* Estilos para el menú de navegación */
+nav {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Estilos para los campos de entrada */
+input[type="text"] {
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+select {
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los botones */
+input[type="button"] {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #008000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+input[type="button"]:hover {
+  background-color: #006400;
+}
+
+/* Estilos para la tabla de amortización */
+.amortization-table {
+  margin-top: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+thead {
+  background-color: #008000;
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Estilos para el pie de página */
+footer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+a {
+  color: #008000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
