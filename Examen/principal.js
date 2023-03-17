@@ -75,7 +75,7 @@ function examenF() {
           "$" + totalPago.toFixed(2);
         document.querySelector("#totalCuota").textContent =
           "$" + totalCuota.toFixed(2);
-      } else {
+      } else {  
         alert("Ingresa una cantidad de capital valida");
         return false;
       }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <link <link rel="stylesheet" href="./juego.css">>
+    <script src="./juego.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div id="titulo">
+            <h1>Piedra , Papel , Tijera , Lagarto ,Spock</h1>
+        </div>
+        <div id="instrucciones"> 
+            <p>
+                ¿Conoces piedra papel o tijeras?
+                Bueno este juego es algo siliar pero con lagarto y Spock
+                En la siguiente imagen se pueden ver las reglas 
+
+            </p>
+        </div>
+            <div id="imagen-instroccion" class="imagen">
+                <img src="./image/indicaciones.jpg">
+                
+            </div>
+            
+            <div class="imagen" id="selected">
+                <img src="./image/lagarto.jpg" alt="Archivo no disponibler">
+
+            </div>
+        </div>
+            <div id="selector">
+                <label>Selecciona tu opcion</label>
+                <select name="opcion" id="opcion">
+                    <option value="0" style="background-image: url('./image/piedra.jpg')" selected>Piedra</option>
+                    <option value="1" style="background-image: url('./image/papel.jpg')">Papel</option>
+                    <option value="2" style="background-image: url('./image/tijeras.jpg')">Tijera</option>
+                    <option value="3" style="background-image: url('./image/lagarto.jpg')">Lagarto</option>
+                    <option value="4" style="background-image: url('./image/spock.jpg')">Spock</option>
+                  </select>
+                </div>
+            </div>
+
+            <input
+          type="button"
+          value="Confirmar"
+          id="confirmar"
+          onclick="return proceso()"/>
+
+          <input
+          type="button"
+          value="Vaciar"
+          id="vaciocomosuspromesas"
+          onclick="return eliminar()"/>
+
+          <tr>
+            <td><pre id="ganador"></pre></td>
+            <td><pre id="maquina"></pre></td>
+            <td><pre id="opc"></pre></td>
+          </tr>
+    </div>
+</body>
+</html>

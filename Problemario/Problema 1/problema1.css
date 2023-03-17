@@ -1,11 +1,11 @@
 body {
-    background-color: #f2f2f2; /*Color de fondo del body*/
-    font-family: Arial, sans-serif; /*Estilo de fuente para todo el documento*/
-    margin: 0; /*Elimina los márgenes predeterminados del body*/
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif; 
+    margin: 0; 
   }
   
   .problematica {
-    background-color: #fff; /*Color de fondo para la sección problemática*/
+    background-color: #fff; 
     border: 1px solid #ccc; 
     margin: 20px auto; 
     padding: 20px; 
@@ -13,22 +13,22 @@ body {
   }
   
   .proceso {
-    background-color: #fff; /*Color de fondo para la sección proceso*/
-    border: 1px solid #ccc; /*Agrega un borde de 1px con color gris claro*/
-    margin: 20px auto; /*Centra el contenedor y le da un margen superior e inferior de 20px y margen izquierdo y derecho automáticos*/
-    padding: 20px; /*Agrega un relleno interno de 20px*/
-    text-align: center; /*Centra el texto en el contenedor*/
+    background-color: #fff; 
+    border: 1px solid #ccc; 
+    margin: 20px auto; 
+    padding: 20px; 
+    text-align: center; 
   }
   
   h3 {
-    margin-top: 0; /*Elimina el margen superior predeterminado del encabezado h3*/
+    margin-top: 0; 
   }
   
   .input_text {
-    border: 1px solid #ccc; /*Agrega un borde de 1px con color gris claro*/
-    margin: 10px; /*Da un margen de 10px a todos los lados del input*/
-    padding: 5px; /*Agrega un relleno interno de 5px*/
-    width: 200px; /*Define un ancho de 200px para el input*/
+    border: 1px solid #ccc; 
+    margin: 10px;
+    padding: 5px; 
+    width: 200px; 
   }
   .regreso{
     font-style: italic;
@@ -36,14 +36,14 @@ body {
     }
   input[type="button"],
   input[type="number"] {
-    background-color: #4CAF50; /*Color de fondo para el botón y el input de número*/
-    border: none; /*Elimina el borde predeterminado*/
-    border-radius: 5px; /*Agrega un borde redondeado de 5px*/
-    color: white; /*Color del texto*/
-    cursor: pointer; /*Cambia el cursor a una mano*/
-    margin: 10px; /*Da un margen de 10px a todos los lados del botón y el input de número*/
-    padding: 10px; /*Agrega un relleno interno de 10px*/
-    width: 200px; /*Define un ancho de 200px para el botón y el input de número*/
+    background-color: #4CAF50; 
+    border: none; 
+    border-radius: 5px; 
+    color: white; 
+    cursor: pointer; 
+    margin: 10px;
+    padding: 10px; 
+    width: 200px; 
   }
   
   input[type="button"]:hover,

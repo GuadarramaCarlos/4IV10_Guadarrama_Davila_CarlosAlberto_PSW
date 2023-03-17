@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos para el contenedor principal */
+  .main-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estilos para el título */
+  #titulo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Estilos para las instrucciones */
+  #instrucciones {
+    margin-bottom: 40px;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* Estilos para la imagen de instrucciones */
+  #imagen-instruccion {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Estilos para el selector de opciones */
+  #selector {
+    margin-top: 20px;
+  }
+  
+
+
+  label {
+    font-size: 18px;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  select {
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: #333;
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding-left: 5px;
+  }
+  
+  .valores {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
