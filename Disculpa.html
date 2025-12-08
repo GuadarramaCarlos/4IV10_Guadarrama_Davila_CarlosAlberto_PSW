@@ -99,7 +99,7 @@
             font-weight: 600;
         }
 
-        /* Botón decorativo (no hace nada, solo se ve bonito) */
+        /* Botón decorativo */
         .heart-btn {
             margin-top: 30px;
             background: #ff6b6b;
@@ -111,10 +111,19 @@
             cursor: pointer;
             transition: background 0.3s;
             box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+            outline: none;
         }
 
         .heart-btn:hover {
             background: #ff4757;
+        }
+
+        /* Ajuste para pantallas muy pequeñas */
+        @media (max-width: 500px) {
+            img {
+                width: 140px;
+                height: 140px;
+            }
         }
 
     </style>
@@ -133,17 +142,17 @@
 
         <div class="pet-container">
             <div class="pet-wrapper">
-                <img src="https://loremflickr.com/320/320/kitten" alt="Un gatito tierno">
+                <img src="https://images.unsplash.com/photo-1573865526739-1065ae183282?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Un gatito tierno con ojos grandes">
                 <span class="caption">El gatito del perdón 🐱</span>
             </div>
             
             <div class="pet-wrapper">
-                <img src="https://loremflickr.com/320/320/raccoon" alt="Un mapache gracioso">
+                <img src="https://images.unsplash.com/photo-1604608633739-96253451889e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Un mapache curioso">
                 <span class="caption">El mapache de la paz 🦝</span>
             </div>
         </div>
 
-        <button class="heart-btn" onclick="alert('¡Prometo compensarlo! 🥺')">Te debo una ❤️</button>
+        <button class="heart-btn" onclick="alert('¡Gracias por entender! 🥺💖')">Te debo una ❤️</button>
     </div>
 
 </body>
