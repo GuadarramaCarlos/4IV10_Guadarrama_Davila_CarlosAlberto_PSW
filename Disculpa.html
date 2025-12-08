@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una pequeña disculpa...</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos Generales */
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            background-color: #ffdee9;
+            background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+            font-family: 'Quicksand', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Tarjeta Principal */
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+            backdrop-filter: blur(10px);
+            border: 2px solid #fff;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Animación de flotación suave */
+        @keyframes float {
+            0% { transform: translatey(0px); }
+            50% { transform: translatey(-10px); }
+            100% { transform: translatey(0px); }
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            color: #ff6b6b;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.05);
+        }
+
+        p {
+            color: #555;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        /* Contenedor de Imágenes */
+        .pet-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .pet-wrapper {
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .pet-wrapper:hover {
+            transform: scale(1.05) rotate(2deg);
+            z-index: 10;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 5px solid white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Etiquetas debajo de las fotos */
+        .caption {
+            display: block;
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: #888;
+            font-weight: 600;
+        }
+
+        /* Botón decorativo (no hace nada, solo se ve bonito) */
+        .heart-btn {
+            margin-top: 30px;
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .heart-btn:hover {
+            background: #ff4757;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>¡Lo siento mucho! 💔</h1>
+        
+        <p>
+            Perdón por no poder salir, <span class="highlight">personita</span>. 
+            De verdad que me siento muy apenado y haré lo posible para compensarlo. 
+            <br><br>
+            Por lo mientras, para que sonrías un poquito, mira a este gatito y a este mapache:
+        </p>
+
+        <div class="pet-container">
+            <div class="pet-wrapper">
+                <img src="https://loremflickr.com/320/320/kitten" alt="Un gatito tierno">
+                <span class="caption">El gatito del perdón 🐱</span>
+            </div>
+            
+            <div class="pet-wrapper">
+                <img src="https://loremflickr.com/320/320/raccoon" alt="Un mapache gracioso">
+                <span class="caption">El mapache de la paz 🦝</span>
+            </div>
+        </div>
+
+        <button class="heart-btn" onclick="alert('¡Prometo compensarlo! 🥺')">Te debo una ❤️</button>
+    </div>
+
+</body>
+</html>
