@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        /* Estilos generales con paleta pastel */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffe4e1; /* Rosa pastel (Misty Rose) */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #fff0f5; /* Lavanda suave */
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 500px;
+            border: 5px solid #ffb6c1; /* Rosa claro */
+        }
+
+        h1 {
+            color: #d87093; /* Rosa fuerte pastel */
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        #btn-si {
+            background-color: #b0f2c2; /* Verde pastel */
+            color: #4a7c59;
+        }
+
+        #btn-no {
+            background-color: #ffb3ba; /* Rojo/Rosa pastel */
+            color: #8b434a;
+        }
+
+        #mensaje-final {
+            display: none;
+            color: #d87093;
+            font-size: 1.8rem;
+            font-weight: bold;
+            animation: aparecer 0.5s ease-out;
+        }
+
+        @keyframes aparecer {
+            from { opacity: 0; transform: scale(0.5); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="main-container">
+        <div id="pregunta">
+            <h1>¿Te gustaría ser mi San Valentín? 💖</h1>
+            <div class="buttons">
+                <button id="btn-si" onclick="aceptar()">¡SÍ!</button>
+                <button id="btn-no" onmouseover="crecerSi()" onclick="crecerSi()">No</button>
+            </div>
+        </div>
+
+        <div id="mensaje-final">
+            Owwwwwwwwwwwwwww, gracias personita, te quiero mucho 🥰✨
+        </div>
+    </div>
+
+    <script>
+        let escalaSi = 1;
+        let paddingSi = 15;
+        let fontSizeSi = 1.2;
+
+        function crecerSi() {
+            // Aumentamos el tamaño del botón SI
+            escalaSi += 0.3;
+            fontSizeSi += 0.2;
+            
+            const btnSi = document.getElementById('btn-si');
+            btnSi.style.transform = `scale(${escalaSi})`;
+            
+            // También podemos cambiar el texto del botón "No" para hacerlo más gracioso
+            const frasesNo = [
+                "¿Segura?", "¡Piénsalo otra vez!", "Mírame a los ojitos...", 
+                "Te daré un dulce", "¡Pica aquí!", "Ándaleeeee"
+            ];
+            const btnNo = document.getElementById('btn-no');
+            const fraseRandom = frasesNo[Math.floor(Math.random() * frasesNo.length)];
+            btnNo.innerText = fraseRandom;
+        }
+
+        function aceptar() {
+            document.getElementById('pregunta').style.display = 'none';
+            document.getElementById('mensaje-final').style.display = 'block';
+            document.body.style.backgroundColor = '#ffc0cb'; // Un rosa un poco más intenso al aceptar
+        }
+    </script>
+</body>
+</html>
