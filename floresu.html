@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magical Vase - Pixar Style</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #050b14; /* Deep Navy Blue */
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Magical floating animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+        }
+
+        @keyframes float-delayed {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(-3deg); }
+        }
+
+        @keyframes gentle-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        @keyframes glow-pulse {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+
+        /* Glassmorphism Classes */
+        .glass-vase {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 
+                0 20px 50px rgba(0,0,0,0.5),
+                inset 0 0 20px rgba(255,255,255,0.1);
+        }
+
+        .glass-water {
+            background: linear-gradient(to bottom, transparent 40%, rgba(135, 206, 250, 0.1) 100%);
+            border-bottom-left-radius: inherit;
+            border-bottom-right-radius: inherit;
+        }
+
+        /* 3D Emoji styling */
+        .emoji-3d {
+            filter: drop-shadow(0 15px 15px rgba(0,0,0,0.6));
+            display: inline-block;
+        }
+        
+        .flower-shadow {
+            filter: drop-shadow(0 10px 10px rgba(0,0,0,0.5)) drop-shadow(0 0 20px rgba(255, 215, 0, 0.3));
+        }
+
+        .animal-shadow {
+            filter: drop-shadow(0 12px 10px rgba(0,0,0,0.7));
+        }
+
+        /* Animation utilities */
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-float-delayed { animation: float-delayed 7s ease-in-out infinite 1s; }
+        .animate-bounce-gentle { animation: gentle-bounce 3s ease-in-out infinite; }
+        .animate-glow { animation: glow-pulse 4s ease-in-out infinite; }
+        
+        /* Custom stem styles */
+        .stem {
+            width: 6px;
+            background: linear-gradient(to right, #4ade80, #22c55e);
+            border-radius: 10px;
+            position: absolute;
+            z-index: 0;
+            box-shadow: inset -2px 0 4px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen w-full flex items-center justify-center relative sm:p-8 p-4">
+
+    <!-- Ambient Warm Lighting (Background Orbs) -->
+    <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-yellow-500 rounded-full mix-blend-screen filter blur-[120px] animate-glow z-0"></div>
+    <div class="absolute bottom-1/3 right-1/4 w-80 h-80 bg-orange-600 rounded-full mix-blend-screen filter blur-[140px] animate-glow z-0" style="animation-delay: 2s;"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-screen filter blur-[150px] opacity-30 z-0"></div>
+
+    <main class="relative z-10 w-full max-w-md mx-auto flex flex-col items-center mt-16 sm:mt-24">
+        
+        <!-- The Bouquet Container -->
+        <div class="relative w-full h-64 sm:h-80 flex items-center justify-center z-20 mb-[-100px] sm:mb-[-120px]">
+            <!-- Back Layer Flowers -->
+            <div class="absolute -top-10 left-12 sm:left-20 z-10 animate-float text-[50px] sm:text-[70px] flower-shadow">🌻</div>
+            <div class="absolute -top-12 right-10 sm:right-20 z-10 animate-float-delayed text-[60px] sm:text-[80px] flower-shadow">🌼</div>
+            <div class="absolute top-0 left-0 sm:-left-10 z-10 animate-float text-[55px] sm:text-[75px] flower-shadow" style="animation-duration: 5s;">🏵️</div>
+            <div class="absolute top-4 -right-4 sm:-right-12 z-10 animate-float text-[65px] sm:text-[85px] flower-shadow" style="animation-duration: 7s;">🌻</div>
+            
+            <!-- Mid Layer Flowers -->
+            <div class="absolute top-10 left-4 sm:left-10 z-20 animate-float-delayed text-[70px] sm:text-[90px] flower-shadow">🌻</div>
+            <div class="absolute top-12 right-4 sm:right-10 z-20 animate-float text-[75px] sm:text-[95px] flower-shadow" style="animation-duration: 5.5s;">🏵️</div>
+            <div class="absolute top-2 left-1/4 z-20 animate-float text-[65px] sm:text-[85px] flower-shadow" style="animation-duration: 6.2s;">🌼</div>
+            <div class="absolute top-8 right-1/4 z-20 animate-float-delayed text-[70px] sm:text-[90px] flower-shadow" style="animation-duration: 4.8s;">🌻</div>
+            
+            <!-- Center & Front Flowers -->
+            <div class="absolute top-0 z-30 animate-float text-[100px] sm:text-[140px] flower-shadow" style="transform-origin: bottom center;">🌼</div>
+            <div class="absolute top-24 left-8 sm:left-16 z-30 animate-float-delayed text-[60px] sm:text-[80px] flower-shadow">🌼</div>
+            <div class="absolute top-28 right-10 sm:right-16 z-30 animate-float text-[65px] sm:text-[85px] flower-shadow" style="animation-duration: 6.5s;">🌻</div>
+            <div class="absolute top-36 left-1/3 z-30 animate-float-delayed text-[55px] sm:text-[75px] flower-shadow" style="animation-duration: 5.2s;">🏵️</div>
+            <div class="absolute top-32 right-1/3 z-30 animate-float text-[50px] sm:text-[70px] flower-shadow" style="animation-duration: 4.5s;">🌼</div>
+
+            <!-- Magic Sparkles -->
+            <div class="absolute -top-10 right-20 text-yellow-300 text-2xl animate-pulse" style="animation: sparkle 3s infinite;">✨</div>
+            <div class="absolute top-10 -left-10 text-yellow-200 text-xl animate-pulse" style="animation: sparkle 4s infinite 1s;">✨</div>
+            <div class="absolute top-20 left-20 text-yellow-200 text-xl animate-pulse" style="animation: sparkle 4s infinite 1.5s;">✨</div>
+            <div class="absolute bottom-20 right-1/4 text-orange-300 text-3xl animate-pulse" style="animation: sparkle 3.5s infinite 2s;">✨</div>
+            <div class="absolute bottom-32 -right-10 text-yellow-100 text-2xl animate-pulse" style="animation: sparkle 3s infinite 0.5s;">✨</div>
+        </div>
+
+        <!-- The Glass Vase -->
+        <div class="relative z-10 w-48 sm:w-64 h-64 sm:h-80 rounded-t-[100px] rounded-b-[40px] glass-vase flex flex-col items-center justify-end overflow-hidden group transition-transform duration-500 hover:scale-105">
+            
+            <!-- Highlights and Reflections on Glass -->
+            <div class="absolute top-0 left-0 w-full h-full rounded-t-[100px] rounded-b-[40px] border-t border-l border-white/40 pointer-events-none"></div>
+            <div class="absolute top-10 left-4 w-4 h-3/4 bg-gradient-to-b from-white/30 to-transparent rounded-full filter blur-sm transform -rotate-3 pointer-events-none"></div>
+            <div class="absolute top-1/4 right-6 w-8 h-1/2 bg-gradient-to-b from-white/10 to-transparent rounded-full filter blur-md pointer-events-none"></div>
+
+            <!-- Stems inside the vase -->
+            <div class="absolute top-0 w-full h-full flex justify-center z-0 opacity-80">
+                <div class="stem h-full transform rotate-2 left-1/2 -ml-3"></div>
+                <div class="stem h-full transform -rotate-6 left-1/3"></div>
+                <div class="stem h-full transform rotate-12 right-1/3"></div>
+                <div class="stem h-4/5 transform -rotate-12 left-1/4 top-10"></div>
+                <div class="stem h-5/6 transform rotate-8 right-1/4 top-5"></div>
+                <!-- Extra stems for the massive bouquet -->
+                <div class="stem h-3/4 transform rotate-12 left-[40%] top-8 opacity-75"></div>
+                <div class="stem h-full transform -rotate-8 right-[40%] top-2 opacity-75"></div>
+                <div class="stem h-4/5 transform -rotate-[15deg] left-[20%] top-12 opacity-60"></div>
+                <div class="stem h-5/6 transform rotate-[20deg] right-[20%] top-10 opacity-60"></div>
+                <div class="stem h-full transform rotate-4 left-[55%] opacity-80"></div>
+            </div>
+
+            <!-- Water level inside vase -->
+            <div class="absolute bottom-0 w-full h-3/5 glass-water z-0 border-t border-white/20">
+                <!-- Submerged parts of stems (darker) -->
+                <div class="absolute inset-0 bg-blue-900/10 backdrop-blur-[2px]"></div>
+            </div>
+        </div>
+
+        <!-- The Base & Characters -->
+        <div class="relative w-full max-w-sm h-32 sm:h-40 mt-[-20px] sm:mt-[-30px] z-20 flex justify-between items-end px-4 sm:px-8">
+            
+            <!-- Base Shadow for Vase -->
+            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 w-40 sm:w-56 h-8 bg-black/60 rounded-[100%] filter blur-xl z-0"></div>
+
+            <!-- Cat -->
+            <div class="relative z-10 flex flex-col items-center animate-bounce-gentle">
+                <div class="text-[50px] sm:text-[70px] animal-shadow emoji-3d transform -scale-x-100">
+                    🐈‍⬛
+                </div>
+                <!-- Toy/Interaction element -->
+                <div class="absolute -right-4 sm:-right-6 bottom-0 text-xl sm:text-2xl animate-pulse animal-shadow">
+                    🧶
+                </div>
+            </div>
+
+            <!-- Raccoon -->
+            <div class="relative z-10 flex flex-col items-center animate-bounce-gentle" style="animation-delay: 1.5s;">
+                <div class="text-[50px] sm:text-[70px] animal-shadow emoji-3d">
+                    🦝
+                </div>
+                <!-- Toy/Interaction element -->
+                <div class="absolute -left-6 sm:-left-8 bottom-2 text-xl sm:text-2xl animate-float animal-shadow">
+                    🌼
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Foreground Dust/Particles -->
+    <div class="fixed inset-0 pointer-events-none z-50 overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-1 h-1 bg-yellow-200 rounded-full filter blur-[1px] animate-float opacity-50"></div>
+        <div class="absolute top-1/2 right-1/4 w-2 h-2 bg-orange-200 rounded-full filter blur-[1px] animate-float-delayed opacity-40"></div>
+        <div class="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-yellow-100 rounded-full filter blur-[1px] animate-float opacity-60"></div>
+        <div class="absolute top-3/4 right-1/3 w-1 h-1 bg-white rounded-full filter blur-[1px] animate-float-delayed opacity-30"></div>
+    </div>
+
+</body>
+</html>
